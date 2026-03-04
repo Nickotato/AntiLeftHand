@@ -5,6 +5,7 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.PlayerLikeEntity;
 import net.minecraft.util.Arm;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -23,6 +24,15 @@ public abstract class PlayerMixin {
             }
         }
 
-        cir.setReturnValue(Arm.RIGHT);
+        cir.setReturnValue(antilefthand$getArmValue());
+    }
+
+    @Unique
+    private Arm antilefthand$getArmValue() {
+        if (AntiLeftHandConfig.INSTANCE.getAntiRightHand()) {
+            return Arm.LEFT;
+        }
+
+        return Arm.RIGHT;
     }
 }

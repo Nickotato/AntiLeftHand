@@ -1,6 +1,6 @@
 # Anti Left Hand
 
-Every thought the left hand looked weird or do other people using it distract you? Well you never have to fear again.
+Ever thought the left hand looked weird or do other people using it distract you? Well you never have to fear again.
 **Anti Left Hand** is a Minecraft Mod that forces all players to use the right hand on your screen.
 
 ---
@@ -21,16 +21,22 @@ Every thought the left hand looked weird or do other people using it distract yo
 
 ---
 
+## How to use
+
+You can either use commands or open the GUI using the hotkey *J*.
+
+It can be remapped under the miscellaneous controls.
+
+---
+
 ## Quick Command Reference
 
-| Command                                       | Description                               |
-| --------------------------------------------- | ----------------------------------------- |
-| `/antilefthand toggle`                        | Toggles the mod on or off           |
-| `/antilefthand toggle_affecting_user`         | Toggles whether or not the mod should affect you|
+| Command                                       | Description                                       |
+| --------------------------------------------- |---------------------------------------------------|
+| `/antilefthand toggle`                        | Toggles the mod on or off                         |
+| `/antilefthand toggle_apply_to_self`         | Toggles whether or not the mod should affect you  |
+| `/antilefthand toggle_anti_right_hand`         | Toggles whether the mod should work in reverse :( |
 
 ## Planned Features
 
-* Remove Kotlin Dependency, it's really not needed.
-* Add a GUI
-* Add config that will save the user's settings.
-* Force people to use left hand if that's your thing...
+* Nothing :o
