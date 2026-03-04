@@ -1,7 +1,6 @@
 package me.nickotato.antilefthand.mixin.client;
 
 import me.nickotato.antilefthand.client.AntiLeftHandConfig;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.PlayerLikeEntity;
 import net.minecraft.util.Arm;
@@ -16,7 +15,7 @@ public abstract class PlayerMixin {
     @Inject(method = "getMainArm", at=@At("HEAD"), cancellable = true)
     private void antilefthand$forceRightArm(CallbackInfoReturnable<Arm> cir) {
         if (!AntiLeftHandConfig.INSTANCE.getEnabled()) return;
-        if (!AntiLeftHandConfig.INSTANCE.getAffectingUser()) {
+        if (!AntiLeftHandConfig.INSTANCE.getApplyToSelf()) {
             PlayerLikeEntity self = (PlayerLikeEntity)(Object)this;
 
             if (self instanceof ClientPlayerEntity) {

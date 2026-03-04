@@ -19,14 +19,12 @@ class AntiLeftHandCommands {
     }
 
     fun toggleLeftHand(): Int {
-
-        AntiLeftHandConfig.enabled = !AntiLeftHandConfig.enabled
-
+        AntiLeftHandConfig.toggle()
         return 1
     }
 
     fun toggleAffectingUser(): Int {
-        AntiLeftHandConfig.affectingUser = !AntiLeftHandConfig.affectingUser
+        AntiLeftHandConfig.toggleApplyToSelf()
         return 1
     }
 }
