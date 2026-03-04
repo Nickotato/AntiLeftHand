@@ -12,21 +12,27 @@ class AntiLeftHandCommands {
                 .then(literal("toggle")
                     .executes { toggleLeftHand() }
                 )
-                .then(literal("toggle_affecting_user")
+                .then(literal("toggle_apply_to_self")
                     .executes { toggleAffectingUser() }
+                )
+                .then(literal("toggle_anti_right_hand")
+                    .executes { toggleAntiRightHand() }
                 )
         )
     }
 
     fun toggleLeftHand(): Int {
-
-        AntiLeftHandConfig.enabled = !AntiLeftHandConfig.enabled
-
+        AntiLeftHandConfig.toggle()
         return 1
     }
 
     fun toggleAffectingUser(): Int {
-        AntiLeftHandConfig.affectingUser = !AntiLeftHandConfig.affectingUser
+        AntiLeftHandConfig.toggleApplyToSelf()
+        return 1
+    }
+
+    fun toggleAntiRightHand(): Int{
+        AntiLeftHandConfig.toggleAntiRightHand()
         return 1
     }
 }
