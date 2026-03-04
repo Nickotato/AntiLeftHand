@@ -33,3 +33,4 @@ Every thought the left hand looked weird or do other people using it distract yo
 * Remove Kotlin Dependency, it's really not needed.
 * Add a GUI
 * Add config that will save the user's settings.
+* Force people to use right hand as well if that's your thing...
